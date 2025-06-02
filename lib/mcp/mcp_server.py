@@ -2,8 +2,8 @@ from typing import Any
 import httpx
 from mcp.server.fastmcp import FastMCP
 
-from lib.backend.backend_requester import BackendRequester, Response, ResponseStr
-from lib.common.constants import BACKEND_HOST, BACKEND_PORT
+from ..backend.backend_requester import BackendRequester, Response, ResponseStr
+from ..common.constants import BACKEND_HOST, BACKEND_PORT
 
 mcp = FastMCP("notification_bot_backend")
 
@@ -17,3 +17,6 @@ async def get_deeds_for_user(user_id: int) -> Response:
     return response
 
 # add other functions
+
+if __name__ == "__main__":
+    mcp.run()

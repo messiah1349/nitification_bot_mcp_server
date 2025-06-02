@@ -1,5 +1,5 @@
-from lib.mcp import *
-from lib.mcp.mcp import mcp
+import asyncio
+from lib.mcp_client.mcp_client import MCPClient
 
 if __name__ == "__main__":
-    mcp.run()
+    asyncio.run(MCPClient())
